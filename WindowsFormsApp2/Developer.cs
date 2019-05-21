@@ -6,16 +6,30 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp2
 {
-    class Developers:employee
+    public class Developers : Employee
     {
-        string Devtype;
-        string Supervisor;
-        string TaxType;
-    
-    public string DevelopType
+        #region Private Members
+        private string devDevType;
+        private string devSupervisor;
+        private string devTaxType;
+        #endregion
+
+        #region Public Properties
+        public string DeveloperType
         {
-            get { return Devtype; }
-            set { Devtype = value; }
+            get { return devDevType; }
+            set { devDevType = value; }
         }
+        public string Supervisor
+        {
+            get { return devSupervisor; }
+            set { devSupervisor = value; }
+        }
+        public string TaxType
+        {
+            get { return devTaxType; }
+            set { devTaxType = value; }
+        }
+        #endregion
     }
 }

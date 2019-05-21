@@ -28,134 +28,172 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.txtPath = new System.Windows.Forms.TextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.ofdMain = new System.Windows.Forms.OpenFileDialog();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnProcess = new System.Windows.Forms.Button();
+            this.dgvEmployees = new System.Windows.Forms.DataGridView();
+            this.rbShow3 = new System.Windows.Forms.RadioButton();
+            this.rbShow5 = new System.Windows.Forms.RadioButton();
+            this.rbShowAll = new System.Windows.Forms.RadioButton();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEmpType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSupervisor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCostCenter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDevType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTaxType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // label1
             // 
-            this.button2.Location = new System.Drawing.Point(225, 45);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 32);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Find FIle";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click_1);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(44, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(175, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Load/Process Employee File";
             // 
-            // button3
+            // btnProcess
             // 
-            this.button3.Location = new System.Drawing.Point(739, 24);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 75);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "exit";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.Button3_Click);
+            this.btnProcess.Location = new System.Drawing.Point(225, 21);
+            this.btnProcess.Name = "btnProcess";
+            this.btnProcess.Size = new System.Drawing.Size(92, 23);
+            this.btnProcess.TabIndex = 1;
+            this.btnProcess.Text = "Process File";
+            this.btnProcess.UseVisualStyleBackColor = true;
+            this.btnProcess.Click += new System.EventHandler(this.btnProcess_Click);
             // 
-            // txtPath
+            // dgvEmployees
             // 
-            this.txtPath.Location = new System.Drawing.Point(47, 48);
-            this.txtPath.Name = "txtPath";
-            this.txtPath.Size = new System.Drawing.Size(159, 26);
-            this.txtPath.TabIndex = 4;
-            this.txtPath.TextChanged += new System.EventHandler(this.TxtPath_TextChanged);
+            this.dgvEmployees.AllowUserToAddRows = false;
+            this.dgvEmployees.AllowUserToDeleteRows = false;
+            this.dgvEmployees.AllowUserToResizeColumns = false;
+            this.dgvEmployees.AllowUserToResizeRows = false;
+            this.dgvEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmployees.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colName,
+            this.colAddress,
+            this.colEmpType,
+            this.colSupervisor,
+            this.colCostCenter,
+            this.colDevType,
+            this.colTaxType});
+            this.dgvEmployees.Location = new System.Drawing.Point(20, 90);
+            this.dgvEmployees.MultiSelect = false;
+            this.dgvEmployees.Name = "dgvEmployees";
+            this.dgvEmployees.ShowEditingIcon = false;
+            this.dgvEmployees.Size = new System.Drawing.Size(697, 214);
+            this.dgvEmployees.TabIndex = 2;
             // 
-            // listView1
+            // rbShow3
             // 
-            this.listView1.AccessibleName = "lstTextFile";
-            this.listView1.Location = new System.Drawing.Point(60, 194);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(770, 285);
-            this.listView1.TabIndex = 5;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged);
+            this.rbShow3.AutoSize = true;
+            this.rbShow3.Checked = true;
+            this.rbShow3.Location = new System.Drawing.Point(47, 54);
+            this.rbShow3.Name = "rbShow3";
+            this.rbShow3.Size = new System.Drawing.Size(121, 20);
+            this.rbShow3.TabIndex = 3;
+            this.rbShow3.TabStop = true;
+            this.rbShow3.Text = "Show 3 Records";
+            this.rbShow3.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbShow5
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(47, 111);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(92, 24);
-            this.radioButton1.TabIndex = 7;
-            this.radioButton1.Text = "Select 3";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
+            this.rbShow5.AutoSize = true;
+            this.rbShow5.Location = new System.Drawing.Point(174, 54);
+            this.rbShow5.Name = "rbShow5";
+            this.rbShow5.Size = new System.Drawing.Size(121, 20);
+            this.rbShow5.TabIndex = 4;
+            this.rbShow5.TabStop = true;
+            this.rbShow5.Text = "Show 5 Records";
+            this.rbShow5.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbShowAll
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Checked = true;
-            this.radioButton2.Location = new System.Drawing.Point(176, 111);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(92, 24);
-            this.radioButton2.TabIndex = 8;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Select 5";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.RadioButton2_CheckedChanged);
+            this.rbShowAll.AutoSize = true;
+            this.rbShowAll.Location = new System.Drawing.Point(301, 54);
+            this.rbShowAll.Name = "rbShowAll";
+            this.rbShowAll.Size = new System.Drawing.Size(128, 20);
+            this.rbShowAll.TabIndex = 5;
+            this.rbShowAll.TabStop = true;
+            this.rbShowAll.Text = "Show All Records";
+            this.rbShowAll.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // btnExit
             // 
-            this.textBox1.Location = new System.Drawing.Point(507, 142);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 26);
-            this.textBox1.TabIndex = 9;
-            this.textBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
+            this.btnExit.Location = new System.Drawing.Point(615, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(92, 23);
+            this.btnExit.TabIndex = 6;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // radioButton3
+            // colName
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(295, 111);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(98, 24);
-            this.radioButton3.TabIndex = 10;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Select all";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.colName.DataPropertyName = "name";
+            this.colName.HeaderText = "Name";
+            this.colName.Name = "colName";
+            this.colName.Width = 150;
             // 
-            // button5
+            // colAddress
             // 
-            this.button5.Location = new System.Drawing.Point(671, 131);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(128, 37);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "Search";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.Button5_Click);
+            this.colAddress.DataPropertyName = "address";
+            this.colAddress.HeaderText = "Address";
+            this.colAddress.Name = "colAddress";
+            this.colAddress.Width = 250;
             // 
-            // button4
+            // colEmpType
             // 
-            this.button4.Location = new System.Drawing.Point(412, 50);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(140, 34);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "Load";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.Button4_Click);
+            this.colEmpType.DataPropertyName = "empType";
+            this.colEmpType.HeaderText = "Employee Type";
+            this.colEmpType.Name = "colEmpType";
+            this.colEmpType.Width = 125;
+            // 
+            // colSupervisor
+            // 
+            this.colSupervisor.DataPropertyName = "supervisor";
+            this.colSupervisor.HeaderText = "Supervisor";
+            this.colSupervisor.Name = "colSupervisor";
+            this.colSupervisor.Width = 125;
+            // 
+            // colCostCenter
+            // 
+            this.colCostCenter.DataPropertyName = "costcenter";
+            this.colCostCenter.HeaderText = "Cost Center";
+            this.colCostCenter.Name = "colCostCenter";
+            // 
+            // colDevType
+            // 
+            this.colDevType.DataPropertyName = "devtype";
+            this.colDevType.HeaderText = "Dev Type";
+            this.colDevType.Name = "colDevType";
+            // 
+            // colTaxType
+            // 
+            this.colTaxType.DataPropertyName = "taxtype";
+            this.colTaxType.HeaderText = "Tax Type";
+            this.colTaxType.Name = "colTaxType";
             // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(888, 512);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.txtPath);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(719, 318);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.rbShowAll);
+            this.Controls.Add(this.rbShow5);
+            this.Controls.Add(this.rbShow3);
+            this.Controls.Add(this.dgvEmployees);
+            this.Controls.Add(this.btnProcess);
+            this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "Employee Reader";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,17 +201,21 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox txtPath;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.OpenFileDialog ofdMain;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnProcess;
+        private System.Windows.Forms.DataGridView dgvEmployees;
+        private System.Windows.Forms.RadioButton rbShow3;
+        private System.Windows.Forms.RadioButton rbShow5;
+        private System.Windows.Forms.RadioButton rbShowAll;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colEmpType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSupervisor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCostCenter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDevType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTaxType;
     }
 }
 
