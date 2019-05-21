@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp2
 {
-    class Developer:employee
+    class Developers:employee
     {
-        string DeveloperType;
+        string Devtype;
         string Supervisor;
         string TaxType;
+    
+    public string DevelopType
+        {
+            get { return Devtype; }
+            set { Devtype = value; }
+        }
     }
 }

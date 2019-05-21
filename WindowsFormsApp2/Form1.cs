@@ -1,7 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
-
+using System.Xml.Linq;
 
 namespace WindowsFormsApp2
 {
@@ -53,65 +54,75 @@ namespace WindowsFormsApp2
         }
 
 
+   
+
+        private void RadioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string[] lines = File.ReadAllLines(txtPath.Text.TrimStart());
+                foreach (String line in lines)
+                {
+                    listView1.Items.Add(line);
+                }
+
+            }
+
+
+            catch { }
+        }
+
+        private void RadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void Button4_Click(object sender, EventArgs e)
         {
             try
             {
-                try
+                string[] lines = File.ReadAllLines(txtPath.Text.TrimStart());
+                foreach (String line in lines)
                 {
-                    var myStringCollection = Properties.Settings.Default.MyCollection;
-                    foreach (String value in myStringCollection)
-                    {
-                        listView1.Items.Add(myStringCollection);
-                    }
-                   
+                    listView1.Items.Add(line);
                 }
-                catch
-                {
 
-                }
             }
+
+
             catch { }
         }
 
         private void Button5_Click(object sender, EventArgs e)
         {
-            try
+            //creating a new Collections list to query through
+            List<Employees> teachers = new List<Employees>()
             {
                 try
+            {
+                string[] lines = File.ReadAllLines(txtPath.Text.TrimStart());
+                foreach (String line in lines)
                 {
-                    string[] lines = System.IO.File.ReadAllLines(txtPath.Text.TrimStart());
-                    foreach (string line in lines)
-                    {
-                        listView1.Items.Add(line);
-                    }
+                    listView1.Items.Add(line);
                 }
-                catch
-                {
 
-                }
             }
+
+
             catch { }
         }
-
-        private void Button6_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                try
-                {
-                    string[] lines = System.IO.File.ReadAllLines(txtPath.Text.TrimStart());
-                    foreach (string line in lines)
-                    {
-                        listView1.Items.Add(line);
-                    }
-                }
-                catch
-                {
-
-                }
-            }
-            catch { }
+        //tis is where a query setting is being set to null , waiting for user input
+             var UserInput = (from employee in data
+                                    where employee.firstName == "Userinput"
+                                    select employee.lastLast)
+                    .Concat(from employee in data
+                            where employee.firstName == "UserInput"
+                            select employee.Last);
         }
     } 
 }
