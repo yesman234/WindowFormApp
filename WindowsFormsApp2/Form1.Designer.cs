@@ -30,6 +30,7 @@
         {
             this.ofdMain = new System.Windows.Forms.OpenFileDialog();
             this.label1 = new System.Windows.Forms.Label();
+            this.textbox1 = new System.Windows.Forms.TextBox();
             this.btnProcess = new System.Windows.Forms.Button();
             this.dgvEmployees = new System.Windows.Forms.DataGridView();
             this.rbShow3 = new System.Windows.Forms.RadioButton();
@@ -64,6 +65,15 @@
             this.btnProcess.Text = "Process File";
             this.btnProcess.UseVisualStyleBackColor = true;
             this.btnProcess.Click += new System.EventHandler(this.btnProcess_Click);
+            // 
+            // textbox1
+            // 
+            this.textbox1.Location = new System.Drawing.Point(225, 21);
+            this.textbox1.Name = "textbox";
+            this.textbox1.Size = new System.Drawing.Size(92, 23);
+            this.textbox1.TabIndex = 1;
+            this.textbox1.Text = "Process File";
+            //this.textbox1.Click += new System.Object.ToString(this.textbox1);
             // 
             // dgvEmployees
             // 
@@ -203,6 +213,7 @@
 
         private System.Windows.Forms.OpenFileDialog ofdMain;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textbox1;
         private System.Windows.Forms.Button btnProcess;
         private System.Windows.Forms.DataGridView dgvEmployees;
         private System.Windows.Forms.RadioButton rbShow3;
@@ -216,6 +227,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colCostCenter;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDevType;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTaxType;
+       // private 
     }
 }
 
